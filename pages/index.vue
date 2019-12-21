@@ -6,7 +6,7 @@
         pe
       </h1>
       <h2 class="subtitle">
-        个人网站前端
+        My world-class Nuxt.js project
       </h2>
       <div class="links">
         <a
