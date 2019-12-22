@@ -1,9 +1,16 @@
 <template>
   <div>
     <LayoutDefaultHeader></LayoutDefaultHeader>
-    <div style="margin-top: 53px;"><LayoutDefaultHeaderJumbotron></LayoutDefaultHeaderJumbotron></div>
-    <div class="container-body">
-      <nuxt/>
+
+    <div class="container-body" style="margin-top: 64px;">
+      <b-container class="bv-example-row">
+        <b-row>
+          <b-col cols="4" id="left-aside"><LayoutBlogAside></LayoutBlogAside></b-col>
+          <b-col> <nuxt/></b-col>
+        </b-row>
+      </b-container>
+
+
     </div>
     <LayoutDefaultFooter></LayoutDefaultFooter>
   </div>
@@ -11,17 +18,24 @@
 
 <script>
     import LayoutDefaultHeader from '../components/layout/layout-default-header'
-    import LayoutDefaultHeaderJumbotron from '../components/layout/layout-default-header-jumbotron'
     import LayoutDefaultFooter from '../components/layout/layout-default-footer'
+    import LayoutBlogAside from '../components/layout/blog/layout-blog-aside'
     export default {
         components: {
             LayoutDefaultHeader,
-            LayoutDefaultHeaderJumbotron,
-            LayoutDefaultFooter
+            LayoutDefaultFooter,
+            LayoutBlogAside
         }
     }
 </script>
 <style>
+  @media screen and (max-width: 700px) {
+    #left-aside {
+      /*屏幕小于700px*/
+      display: none;
+    }
+  }
+
   .container-body {
     margin-top: 53px;
     min-height: 860px;
