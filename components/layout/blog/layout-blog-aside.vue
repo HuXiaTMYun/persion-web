@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar">
     <p class="sidebar-tab">
-      <span>相关导读</span>
+      <span></span>相关导读
     </p>
 
     <a class="active" href="#home">第一章 初识java</a>
@@ -30,17 +30,30 @@
   }
 
   .sidebar-tab {
-    text-align: center;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 20px;
+  }
+
+  .sidebar-tab span{
+    width:3px;
+    height: 20px;
+    background: #333;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-top: -3px;
   }
 
   .sidebar {
     margin: 0;
-    padding: 0;
     width: 300px;
     background-color: #f1f1f1;
     position: fixed;
     height: 100%;
     overflow: auto;
+    padding-top: 20px;
   }
 
   .sidebar a {
@@ -53,6 +66,7 @@
     margin-left: auto;
     margin-right: auto;
     /*text-align: center;*/
+    border-bottom: 2px solid #f1f1f1;
   }
 
   .sidebar a.active {

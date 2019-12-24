@@ -32,8 +32,14 @@
   @media screen and (max-width: 700px) {
     #left-aside {
       /*屏幕小于700px*/
-      display: none;
+      /*display: none;*/
+      position: fixed;
+      z-index: 2252;
     }
+  }
+
+  #left-aside{
+    max-width: 320px;
   }
 
   .container-body {
