@@ -1,51 +1,42 @@
 <template>
-    <div>
-      <b-card v-for="i in num" :key="i" style="margin-top: 30px;">
-        <b-media>
-          <template v-slot:aside>
-            <b-img blank blank-color="#ccc" width="64" alt="placeholder"></b-img>
-          </template>
+  <div>
+    <b-card v-for="item in rows" :key="item.id" style="margin-top: 30px;" @click="hrefDetail(item)">
+      <b-media>
+        <template v-slot:aside>
+          <b-img :src="require(`../../assets/${item.type}-64.png`)" width="64" alt="placeholder"></b-img>
+        </template>
 
-          <h5 class="mt-0">Media Title</h5>
-          <p>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
-            Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc
-            ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </p>
-          <p>
-            Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque
-            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          </p>
-
-          <b-media>
-            <template v-slot:aside>
-              <b-img blank blank-color="#ccc" width="64" alt="placeholder"></b-img>
-            </template>
-
-            <h5 class="mt-0">Nested Media</h5>
-            <p class="mb-0">
-              Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in
-              faucibus.
-            </p>
-          </b-media>
-        </b-media>
-      </b-card>
-    </div>
+        <h5 class="mt-0">{{item.title}}</h5>
+        <p>
+          {{item.content}}
+        </p>
+      </b-media>
+    </b-card>
+  </div>
 </template>
 
 <script>
-  import vue from 'bootstrap-vue'
+
   export default {
-      components: {},
-        name: "index-blog",
-        data () {
-            return {
-                num: 6,
-            }
+    components: {},
+    name: 'index-blog',
+    props: {
+      rows: {
+        type: Array,
+        default () {
+          return [];
         },
-      methods: {
-      }
-    }
+      },
+    },
+    data () {
+      return {};
+    },
+    methods: {
+      hrefDetail (item) {
+        window.open(`/blog/${item.type}/${item.frame}/${item.blog_code}`);
+      },
+    },
+  };
 </script>
 
 <style scoped>

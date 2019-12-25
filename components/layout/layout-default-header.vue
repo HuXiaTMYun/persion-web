@@ -10,8 +10,8 @@
             <template v-slot:button-content>
               <em>java</em>
             </template>
-            <b-dropdown-item href="/blog">SpringBoot</b-dropdown-item>
-            <b-dropdown-item href="/blog">SpringCloud</b-dropdown-item>
+            <b-dropdown-item href="/blog/java/SpringBoot">SpringBoot</b-dropdown-item>
+            <b-dropdown-item href="/blog/java/SpringCloud">SpringCloud</b-dropdown-item>
           </b-nav-item-dropdown>
           <b-nav-item-dropdown>
             <!-- Using 'button-content' slot -->
@@ -68,9 +68,9 @@
 </template>
 
 <script>
-    export default {
-        name: "layout-default-header"
-    }
+  export default {
+    name: 'layout-default-header',
+  };
 </script>
 
 <style scoped>

@@ -4,7 +4,7 @@
       <span></span>相关导读
     </p>
 
-    <a class="active" href="#home">第一章 初识java</a>
+    <a class="active" href="/blog/java/springboot/chushijava">第一章 初识java</a>
     <a href="#">第二章 Hello Word!</a>
     <a href="#">第三章 变量</a>
     <a href="#">第四章 函数</a>
