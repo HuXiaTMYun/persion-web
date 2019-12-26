@@ -1,1 +1,2 @@
-import CustomComponets from './custom-componets'
+require('./custom-componets');
+require('./custom-fn');

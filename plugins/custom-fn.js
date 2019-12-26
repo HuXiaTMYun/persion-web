@@ -1,0 +1,1 @@
+require('./fn/local-storage');
