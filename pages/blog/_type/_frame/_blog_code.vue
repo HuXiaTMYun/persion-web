@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <BlogDetails :value="value"></BlogDetails>
   </div>
 </template>
@@ -9,7 +9,7 @@
 
   export default {
     layout: 'blog-layout',
-    name: '_blog_code',
+    name: 'blog_code',
     data () {
       return {
         blog_code: this.$route.params.blog_code,
