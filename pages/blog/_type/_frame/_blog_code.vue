@@ -5,15 +5,15 @@
 </template>
 
 <script>
-  import BlogDetails from '../../../../components/blog/blog-details';
-
-  export default {
-    layout: 'blog-layout',
-    name: 'blog_code',
-    data () {
-      return {
-        blog_code: this.$route.params.blog_code,
-        value: `
+import BlogDetails from "../../../../components/blog/blog-details";
+import { TITLE_PLF_NAME } from "assets/properties.js";
+export default {
+  layout: "blog-layout",
+  name: "blog_code",
+  data() {
+    return {
+      blog_code: this.$route.params.blog_code,
+      value: `
                   Heading
 =======
 
@@ -56,12 +56,20 @@ An [example](http://example.com).
 
 Inline <abbr title="Hypertext Markup Language">HTML</abbr> is supported.
                 `,
-      };
-    },
-    components: { BlogDetails },
-  };
+      htmlTitle: ""
+    };
+  },
+  asyncData({ route, error }) {
+    return { htmlTitle: route.params.blog_code + TITLE_PLF_NAME };
+  },
+  components: { BlogDetails },
+  head() {
+    return {
+      title: this.htmlTitle
+    };
+  }
+};
 </script>
 
 <style scoped>
-
 </style>

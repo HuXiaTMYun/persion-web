@@ -1,8 +1,8 @@
 <template>
   <div class="timeline">
-    <div v-for="item in model" class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
+    <div v-for="item in model" :key="item.id" class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
       <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
-        <h3 class=" text-light"><slot name="title" v-bind:item="item">{{item.title}}</slot></h3>
+        <h3 class=" text-light"><slot name="title" :item="item">{{item.title}}</slot></h3>
         <p>{{item.content}}</p>
       </div>
       <div class="col-2 col-sm-1 px-md-3 order-2 timeline-image text-md-center">

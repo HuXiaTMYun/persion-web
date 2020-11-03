@@ -19,6 +19,7 @@
     "moment": "^2.24.0",
     "nuxt": "^2.0.0",
     "responsive-nav": "^1.0.39",
+    "video.js": "^7.6.6",
     "vue": "^2.6.11"
   },
   "devDependencies": {

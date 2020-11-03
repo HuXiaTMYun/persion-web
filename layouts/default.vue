@@ -1,8 +1,8 @@
 <template>
   <div>
     <LayoutDefaultHeader></LayoutDefaultHeader>
-    <div style="margin-top: 53px;"><LayoutDefaultHeaderJumbotron></LayoutDefaultHeaderJumbotron></div>
-    <div class="container-body">
+<!--    <div style="margin-top: 53px;"><LayoutDefaultHeaderJumbotron></LayoutDefaultHeaderJumbotron></div>-->
+    <div class="container-body" style="margin-top: 95px;">
       <nuxt/>
     </div>
     <LayoutDefaultFooter></LayoutDefaultFooter>
@@ -22,6 +22,7 @@
     }
 </script>
 <style>
+
   .container-body {
     margin-top: 53px;
     min-height: 860px;
