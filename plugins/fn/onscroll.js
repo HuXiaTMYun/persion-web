@@ -1,7 +1,11 @@
 import Vue from 'vue';
 Vue.prototype.$onscroll = (fn) => {
   window.onscroll = () => {
-    let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight;
+    let docscrollTop = document.documentElement.scrollTop;
+    let windInnerHeight = window.innerHeight;
+    let docOffsetHeight = document.documentElement.offsetHeight;
+
+    let bottomOfWindow = (docscrollTop + windInnerHeight === docOffsetHeight) || ((docOffsetHeight - docscrollTop - windInnerHeight) <= 5)
     if (bottomOfWindow) {
       fn()
     }
